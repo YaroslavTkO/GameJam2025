@@ -168,7 +168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000494, y: 0.0001092}
+  m_AnchoredPosition: {x: -0.00049591064, y: 0.00010967255}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5254748687346804356
@@ -591,8 +591,8 @@ RectTransform:
   - {fileID: 3899826396890652473}
   - {fileID: 1185054100169498707}
   - {fileID: 1271280333282371341}
-  - {fileID: 6332077652734505007}
   - {fileID: 3119160645124172583}
+  - {fileID: 6332077652734505007}
   m_Father: {fileID: 6615692870355310772}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -652,6 +652,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 5899372545576292802}
+  TipsList:
+  - Stop at the station
+  - Click to destroy stones
+  - Do not forget about the fuel
+  - Upgrade your train at the stations
+  - ;-)
+  - No tips this time
+  tipsText: {fileID: 3199732066490840548}
 --- !u!1 &2959376876072853734
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,12 +691,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2137446944842831163}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00009998102, y: 498}
-  m_SizeDelta: {x: 1455.962, y: 99.887}
+  m_AnchoredPosition: {x: 2.728, y: 498}
+  m_SizeDelta: {x: 1166.762, y: 99.887}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &953569671136593665
 CanvasRenderer:
@@ -1223,13 +1231,13 @@ RectTransform:
   m_Children:
   - {fileID: 6028163525586443112}
   m_Father: {fileID: 2137446944842831163}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -277, y: -98.350006}
+  m_AnchoredPosition: {x: -266, y: -98}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.49999994, y: 0.50000006}
 --- !u!222 &1367291821599471581
 CanvasRenderer:
   m_ObjectHideFlags: 0

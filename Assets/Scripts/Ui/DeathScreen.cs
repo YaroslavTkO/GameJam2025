@@ -7,9 +7,14 @@ using UnityEngine.SceneManagement;
 public class DeathScreen : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
-    
+    public List<string> TipsList;
+    public TextMeshProUGUI tipsText;
 
-   
+
+    public void SetTip()
+    {
+        tipsText.text = "Pro tip: " + TipsList[Random.Range(0, TipsList.Count)];
+    }
     public void SetText(string text)
     {
         scoreText.text = text;

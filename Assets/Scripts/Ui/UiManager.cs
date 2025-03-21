@@ -68,6 +68,7 @@ public class UiManager : MonoBehaviour
         
         gameOverScreen.SetActive(true);
         gameOverScreen.GetComponent<DeathScreen>().SetText("Score: " + score.ToString());
+        gameOverScreen.GetComponent<DeathScreen>().SetTip();
     }
 
     public void ShopChangeVisibility(bool newVisibility)
