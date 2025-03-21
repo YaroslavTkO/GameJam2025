@@ -20,15 +20,24 @@ public class TrainStats : MonoBehaviour
 
     public bool isOnStation = false;
     public StationStats stationBonuses;
-   
+
 
     public void ClaimStationBonus()
     {
-        money += passengers * ticketCost;
-        passengers = stationBonuses.passengers > maxPassengers ? maxPassengers : stationBonuses.passengers;
+        if (stationBonuses.passengers != 0)
+        {
+            money += passengers * ticketCost;
+            passengers += stationBonuses.passengers;
+            if (passengers > maxPassengers)
+            {
+                passengers = maxPassengers;
+            }
+        }
         fuel += stationBonuses.fuel;
+       
         if (fuel > maxFuel)
             fuel = maxFuel;
+        
 
         stationBonuses.passengers = 0;
         stationBonuses.fuel = 0;
@@ -53,6 +62,6 @@ public class TrainStats : MonoBehaviour
 
             }
         }
-        
+
     }
 }

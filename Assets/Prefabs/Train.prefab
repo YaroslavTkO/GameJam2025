@@ -229,6 +229,10 @@ MonoBehaviour:
   deccelarationSpeed: 7
   money: 0
   passengers: 0
+  ticketCost: 5
   fuel: 100
   fuelConsumption: 5
-  maxFuel: 0
+  maxFuel: 200
+  maxPassengers: 10
+  isOnStation: 0
+  stationBonuses: {fileID: 0}

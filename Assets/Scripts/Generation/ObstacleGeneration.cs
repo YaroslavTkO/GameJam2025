@@ -20,7 +20,7 @@ public class ObstacleGeneration : MonoBehaviour
         {
             if (Random.value < obstacleSpawnChance)
             {
-                Vector3 obstaclePosition = new Vector3(0, train.position.y + 15, 0);
+                Vector3 obstaclePosition = new Vector3(0, train.position.y + 50, 0);
                 GameObject obstacle = Instantiate(ObstaclePrefabs[Random.Range(0, ObstaclePrefabs.Length)], obstaclePosition, Quaternion.identity);
                 currentObstacle = obstacle;
             }

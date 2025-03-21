@@ -7,28 +7,36 @@ public class StationGenerator : MonoBehaviour
     public GameObject[] StationPrefabs;
     public Transform train;
     public float stationSpawnRate = 0.0005f;
-    public GameObject currentObstacle;
+    public GameObject currentStation;
+    public float distanceToDelete;
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-    void SpawnObstacle()
+    void SpawnStation()
     {
-        if (currentObstacle == null)
+        if (currentStation == null)
         {
             if (Random.value < stationSpawnRate)
             {
-                Vector3 obstaclePosition = new Vector3(0, train.position.y + 15, 0);
-                GameObject obstacle = Instantiate(StationPrefabs[Random.Range(0, StationPrefabs.Length)], obstaclePosition, Quaternion.identity);
-                currentObstacle = obstacle;
+                Vector3 stationPosition = new Vector3(-3.5f, train.position.y + 45, 0);
+                GameObject station = Instantiate(StationPrefabs[Random.Range(0, StationPrefabs.Length)], stationPosition, Quaternion.identity);
+                currentStation = station;
             }
         }
     }
-    // Update is called once per frame
+    void DestroyStation()
+    {
+        if (currentStation != null)
+        {
+            if (train.position.y > currentStation.transform.position.y + distanceToDelete)
+            {
+                Destroy(currentStation);
+
+            }
+        }
+    }
     void Update()
     {
-        SpawnObstacle();
+        SpawnStation();
+        DestroyStation();
     }
 }
