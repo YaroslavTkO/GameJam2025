@@ -660,6 +660,8 @@ MonoBehaviour:
   - Upgrade your train at the stations
   - ;-)
   - No tips this time
+  - "\u041D\u0435\u043C\u0430\u0454 \u0446\u0456\u043B\u0456, \u043B\u0438\u0448\u0435
+    \u0448\u043B\u044F\u0445"
   tipsText: {fileID: 3199732066490840548}
 --- !u!1 &1653456371982353608
 GameObject:
