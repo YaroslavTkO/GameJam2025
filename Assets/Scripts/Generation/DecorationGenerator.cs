@@ -11,16 +11,25 @@ public class DecorationGenerator : MonoBehaviour
     public float decorationSpace;
     public int decorationCount;
 
+    private void Start()
+    {
+        InvokeRepeating(nameof(SpawnDecoration), 0f, 0.05f);
+    }
+
     void SpawnDecoration()
     {
-        float x = Random.Range(1, 5);
-        GameObject DecorationRight = Instantiate(
-            DecorationPrefabs[Random.Range(0, DecorationPrefabs.Length)], new Vector3(Random.Range(1, 5), spawnPosition), Quaternion.identity);
-        decorationsList.Add(DecorationRight);
-        GameObject DecorationLeft = Instantiate(
-            DecorationPrefabs[Random.Range(0, DecorationPrefabs.Length)], new Vector3(-Random.Range(1, 5), spawnPosition + Random.Range(0f, 1f)), Quaternion.identity);
-        decorationsList.Add(DecorationLeft);
-        spawnPosition += decorationSpace;
+        if (train.position.y > spawnPosition + 3 * decorationSpace - decorationCount / 2 * decorationSpace)
+        {
+            float x = Random.Range(1, 5);
+            GameObject DecorationRight = Instantiate(
+                DecorationPrefabs[Random.Range(0, DecorationPrefabs.Length)], new Vector3(Random.Range(1f, 2f), spawnPosition - Random.Range(0f, 1f)), Quaternion.identity);
+            decorationsList.Add(DecorationRight);
+            GameObject DecorationLeft = Instantiate(
+                DecorationPrefabs[Random.Range(0, DecorationPrefabs.Length)], new Vector3(-Random.Range(1f,2f), spawnPosition + Random.Range(0f, 1f)), Quaternion.identity);
+            decorationsList.Add(DecorationLeft); 
+            spawnPosition += decorationSpace;
+        }
+
     }
 
     void RemoveOldDecoration()
@@ -34,10 +43,7 @@ public class DecorationGenerator : MonoBehaviour
 
     void Update()
     {
-        if (train.position.y > spawnPosition + 3 * decorationSpace - decorationCount / 2 * decorationSpace)
-        {
-            SpawnDecoration();
-            RemoveOldDecoration();
-        }
+
+        RemoveOldDecoration();
     }
 }

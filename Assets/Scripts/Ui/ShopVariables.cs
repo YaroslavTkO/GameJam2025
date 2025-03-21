@@ -24,20 +24,20 @@ public class ShopVariables
         switch (choice)
         {
             case Choice.MAX_FUEL:
-                maxFuelCost.text = newCost.ToString();
+                maxFuelCost.text = newCost.ToString() + " coins";
                 maxFuelLevel.text = "Level " + newLevel.ToString();
 
                 break;
             case Choice.FUEL_CONSUMPTION:
-                fuelConsumptionCost.text = newCost.ToString();
+                fuelConsumptionCost.text = newCost.ToString() + " coins";
                 fuelConsumptionLevel.text = "Level " + newLevel.ToString();
                 break;
             case Choice.DECELERATION:
-                decelerationCost.text = newCost.ToString();
+                decelerationCost.text = newCost.ToString() + " coins";
                 decelerationLevel.text ="Level " + newLevel.ToString();
                 break;
             case Choice.ACCELERATION:
-                accelerationCost.text = newCost.ToString();
+                accelerationCost.text = newCost.ToString() + " coins";
                 accelerationLevel.text = "Level " + newLevel.ToString();
                 break;
 

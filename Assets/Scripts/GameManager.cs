@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour
         int highScore = PlayerPrefs.GetInt("HighScore", 0);
         if(score > highScore)
         {
-            Debug.Log("called");
             PlayerPrefs.SetInt("HighScore", score);
             Debug.Log(PlayerPrefs.GetInt("HighScore"));
             UiManager.Instance.UpdateHighScore();
