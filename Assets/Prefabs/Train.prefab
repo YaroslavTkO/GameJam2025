@@ -113,7 +113,7 @@ Transform:
   m_GameObject: {fileID: 3171765573202061051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4247024, y: 4.256184, z: 1}
+  m_LocalScale: {x: 0.4, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3171765573042334688}
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ec9497bf3b6cb4b88b0967bb3daf97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 8
-  accelerationSpeed: 6
-  deccelarationSpeed: 7
+  maxSpeed: 4
+  accelerationSpeed: 3
+  deccelarationSpeed: 4
   money: 0
   passengers: 0
   ticketCost: 5

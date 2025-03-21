@@ -10,14 +10,27 @@ public class TrainMovement : MonoBehaviour
 
 
     private GameManager manager;
+
+    private bool accelerating = false, decelerating = false;
     // Start is called before the first frame update
     void Start()
     {
         manager = GameManager.Instance;
     }
+
+    public void ChangeAccelerationStatus(bool newStatus)
+    {
+        accelerating = newStatus;
+       
+    }
+    public void ChangeDecelerationStatus(bool newStatus)
+    {
+        decelerating = newStatus;
+    }
+
     void UserInput()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || accelerating)
         {
             currentSpeed += stats.accelerationSpeed * Time.deltaTime;
             if (currentSpeed > stats.maxSpeed)
@@ -26,7 +39,7 @@ public class TrainMovement : MonoBehaviour
             }
 
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || decelerating)
         {
             currentSpeed -= stats.deccelarationSpeed * Time.deltaTime;
             if (currentSpeed < 0)

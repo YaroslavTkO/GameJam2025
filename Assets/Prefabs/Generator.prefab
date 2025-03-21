@@ -48,7 +48,7 @@ MonoBehaviour:
   railPrefab: {fileID: 6465871737829589946, guid: 0793762ec411d104eb498b3483067a55, type: 3}
   train: {fileID: 0}
   railCount: 10
-  railLength: 4.5
+  railLength: 3
   railList: []
 --- !u!114 &7163606670181215375
 MonoBehaviour:

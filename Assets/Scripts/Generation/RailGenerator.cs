@@ -27,7 +27,7 @@ public class RailGenerator : MonoBehaviour
 
     void SpawnRail()
     {
-        GameObject newRail = Instantiate(railPrefab, new Vector3(0, spawnPosition), Quaternion.identity);
+        GameObject newRail = Instantiate(railPrefab, new Vector3(0.35f, spawnPosition), Quaternion.identity);
         railList.Add(newRail);
         spawnPosition += railLength; 
     }

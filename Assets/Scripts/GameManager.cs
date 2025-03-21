@@ -7,7 +7,10 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
-    public int Score;
+    private int score;
+    public int Score {  get { return score; }
+    set { score = value; UiManager.Instance.UpdateScoreText($"Score: {value}"); }
+    }
 
     public bool IsGameActive = true;
 

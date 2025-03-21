@@ -17,7 +17,7 @@ public class StationGenerator : MonoBehaviour
         {
             if (Random.value < stationSpawnRate)
             {
-                Vector3 stationPosition = new Vector3(-3.5f, train.position.y + 45, 0);
+                Vector3 stationPosition = new Vector3(-0.6f, train.position.y + 25, 0);
                 GameObject station = Instantiate(StationPrefabs[Random.Range(0, StationPrefabs.Length)], stationPosition, Quaternion.identity);
                 currentStation = station;
             }
