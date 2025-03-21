@@ -316,8 +316,8 @@ MonoBehaviour:
   passengers: 0
   ticketCost: 5
   fuel: 100
-  fuelConsumption: 6
-  maxFuel: 200
+  fuelConsumption: 5
+  maxFuel: 100
   maxPassengers: 10
   isOnStation: 0
   stationBonuses: {fileID: 0}

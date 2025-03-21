@@ -14,7 +14,14 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI fuelText;
     public TextMeshProUGUI passengersText;
 
+    public ShopVariables vars;
+    
+
+
     public GameObject gameOverScreen;
+    public GameObject shop;
+    public GameObject shopButton;
+
     public bool IsGameActive = true;
 
 
@@ -61,5 +68,15 @@ public class UiManager : MonoBehaviour
         
         gameOverScreen.SetActive(true);
         gameOverScreen.GetComponent<DeathScreen>().SetText("Score: " + score.ToString());
+    }
+
+    public void ShopChangeVisibility(bool newVisibility)
+    {
+        shop.SetActive(newVisibility);
+    }
+
+    public void ShopButtonChangeVisibility(bool newVisibility)
+    {
+        shopButton.SetActive(newVisibility);
     }
 }

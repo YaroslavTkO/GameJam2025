@@ -44,7 +44,7 @@ public class TrainStats : MonoBehaviour
             if (fuel > maxFuel)
                 fuel = maxFuel;
 
-            UiManager.Instance.UpdateFuelText($" {((int)fuel)}\\{(int)maxFuel}");
+            UiManager.Instance.UpdateFuelText($" {((int)fuel)}\\{Mathf.Round(maxFuel)}");
 
             stationBonuses.fuel = 0;
         }
@@ -56,19 +56,12 @@ public class TrainStats : MonoBehaviour
         if (UiManager.Instance.IsGameActive)
         {
             fuel -= Time.deltaTime * fuelConsumption;
-            UiManager.Instance.UpdateFuelText($" {((int)fuel)}\\{(int)maxFuel}");
+            UiManager.Instance.UpdateFuelText($" {((int)fuel)}\\{Mathf.Round(maxFuel)}");
             if (fuel <= 0)
             {
                 GameManager.Instance.IsGameActive = false;
-                GameManager.Instance.GameOver();
             }
 
-
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                Debug.Log($"----------Current stats------------\nMoney: {money}\nPassenger: {passengers}\nFuel: {fuel}");
-
-            }
         }
 
     }

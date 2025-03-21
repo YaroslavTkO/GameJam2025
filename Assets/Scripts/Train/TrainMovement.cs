@@ -61,6 +61,11 @@ public class TrainMovement : MonoBehaviour
             UserInput();
             if(stats.isOnStation && currentSpeed == 0) {
                 stats.ClaimStationBonus();
+                UiManager.Instance.ShopButtonChangeVisibility(true);
+            }
+            else
+            {
+                UiManager.Instance.ShopButtonChangeVisibility(false);
             }
         }
         
