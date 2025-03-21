@@ -8,11 +8,18 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     private int score;
-    public int Score {  get { return score; }
-    set { score = value; UiManager.Instance.UpdateScoreText($"Score: {value}"); }
+    public int Score
+    {
+        get { return score; }
+        set { score = value; UiManager.Instance.UpdateScoreText($"Score: {value}"); }
     }
 
-    public bool IsGameActive = true;
+    private bool isGameActive = true;
+    public bool IsGameActive
+    {
+        get { return isGameActive; }
+        set { isGameActive = value; if (value == false) UiManager.Instance.DeathScreen(score); }
+    }
 
     void Awake()
     {
@@ -20,7 +27,6 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {

@@ -13,7 +13,7 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI fuelText;
 
-
+    public GameObject gameOverScreen;
     public bool IsGameActive = true;
 
 
@@ -23,12 +23,15 @@ public class UiManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+    private void Start()
+    {
+        gameOverScreen.SetActive(false);
     }
 
     public void UpdateMoneyText(string newMoney)
@@ -44,5 +47,12 @@ public class UiManager : MonoBehaviour
     public void UpdateFuelText(string newFuel)
     {
         fuelText.text = newFuel;
+    }
+
+    public void DeathScreen(int score)
+    {
+        
+        gameOverScreen.SetActive(true);
+        gameOverScreen.GetComponent<DeathScreen>().SetText("Score: " + score.ToString());
     }
 }
