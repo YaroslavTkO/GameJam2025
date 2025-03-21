@@ -450,6 +450,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1624123923778114533, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624123923778114533, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 132.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137446944842831163, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00024414062
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687617769016687993, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_text
+      value: 0\10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935429090770300188, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 4935429090770300188, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 134.459
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264343898306385835, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264343898306385835, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 133.691
+      objectReference: {fileID: 0}
     - target: {fileID: 6615692870355310772, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -558,6 +590,14 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 393246108}
+    - target: {fileID: 8601070677414633743, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_text
+      value: 0\200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601070677414633743, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_margin.z
+      value: 0.000015313039
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
 --- !u!1001 &7163606669508978651

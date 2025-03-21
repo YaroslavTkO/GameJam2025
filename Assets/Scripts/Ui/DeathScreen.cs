@@ -19,4 +19,8 @@ public class DeathScreen : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+    public void RetryButton()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

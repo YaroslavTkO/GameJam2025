@@ -12,7 +12,7 @@ public class TrainMovement : MonoBehaviour
     private GameManager manager;
 
     private bool accelerating = false, decelerating = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         manager = GameManager.Instance;
@@ -54,7 +54,6 @@ public class TrainMovement : MonoBehaviour
     }
 
  
-    // Update is called once per frame
     void Update()
     {
         if (manager.IsGameActive)
