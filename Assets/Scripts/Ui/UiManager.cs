@@ -22,8 +22,6 @@ public class UiManager : MonoBehaviour
     public GameObject shop;
     public GameObject shopButton;
 
-    public bool IsGameActive = true;
-
 
     void Awake()
     {

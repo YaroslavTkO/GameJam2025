@@ -33,7 +33,7 @@ public class LevelsController : MonoBehaviour
                     stats.money -= (int)(10 * Mathf.Pow(2, maxFuelLevel));
                     stats.maxFuel *= 1.05f;
                     maxFuelLevel++;
-                    UiManager.Instance.vars.UpdateVariables((int)(10 * Mathf.Pow(2, maxFuelLevel)), maxFuelLevel, choice);
+                    UiManager.Instance.vars.UpdateVariables((int)(10 * Mathf.Pow(2, maxFuelLevel)), maxFuelLevel + 1, choice);
                 }
 
                 break;
@@ -44,7 +44,7 @@ public class LevelsController : MonoBehaviour
                     stats.money -= (int)(10 * Mathf.Pow(2, fuelConsumptionLevel));
                     stats.fuelConsumption *= 0.95f;
                     fuelConsumptionLevel++;
-                    UiManager.Instance.vars.UpdateVariables((int)(10 * Mathf.Pow(2, fuelConsumptionLevel)), fuelConsumptionLevel, choice);
+                    UiManager.Instance.vars.UpdateVariables((int)(10 * Mathf.Pow(2, fuelConsumptionLevel)), fuelConsumptionLevel + 1, choice);
 
                 }
 
@@ -56,7 +56,7 @@ public class LevelsController : MonoBehaviour
                     stats.money -= (int)(10 * Mathf.Pow(2, decelerationLevel));
                     stats.deccelarationSpeed *= 1.05f;
                     decelerationLevel++;
-                    UiManager.Instance.vars.UpdateVariables((int)(10 * Mathf.Pow(2, decelerationLevel)), decelerationLevel, choice);
+                    UiManager.Instance.vars.UpdateVariables((int)(10 * Mathf.Pow(2, decelerationLevel)), decelerationLevel + 1, choice);
 
                 }
 
@@ -68,7 +68,7 @@ public class LevelsController : MonoBehaviour
                     stats.money -= (int)(10 * Mathf.Pow(2, accelerationLevel));
                     stats.accelerationSpeed *= 1.05f;
                     accelerationLevel++;
-                    UiManager.Instance.vars.UpdateVariables((int)(10 * Mathf.Pow(2, accelerationLevel)), accelerationLevel, choice);
+                    UiManager.Instance.vars.UpdateVariables((int)(10 * Mathf.Pow(2, accelerationLevel)), accelerationLevel + 1, choice);
 
                 }
 
