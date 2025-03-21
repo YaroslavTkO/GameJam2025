@@ -14,6 +14,7 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI moneyText2;
     public TextMeshProUGUI fuelText;
     public TextMeshProUGUI passengersText;
+    public TextMeshProUGUI highScoreText;
 
     public ShopVariables vars;
     
@@ -39,6 +40,7 @@ public class UiManager : MonoBehaviour
     private void Start()
     {
         gameOverScreen.SetActive(false);
+        UpdateHighScore();
     }
 
     public void UpdateMoneyText(string newMoneyString)
@@ -79,5 +81,11 @@ public class UiManager : MonoBehaviour
     public void ShopButtonChangeVisibility(bool newVisibility)
     {
         shopButton.SetActive(newVisibility);
+    }
+
+    public void UpdateHighScore()
+    {
+        highScoreText.text = $"High score: {PlayerPrefs.GetInt("HighScore", 0)}";
+    
     }
 }

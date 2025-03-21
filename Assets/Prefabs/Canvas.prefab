@@ -1997,6 +1997,7 @@ MonoBehaviour:
   moneyText2: {fileID: 6839418929442264111}
   fuelText: {fileID: 8601070677414633743}
   passengersText: {fileID: 4687617769016687993}
+  highScoreText: {fileID: 5966783819540177861}
   vars:
     maxFuelCost: {fileID: 1924341633438169527}
     fuelConsumptionCost: {fileID: 4749584952051730547}

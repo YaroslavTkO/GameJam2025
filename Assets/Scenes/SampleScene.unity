@@ -257,7 +257,7 @@ MonoBehaviour:
   train: {fileID: 393246110}
   decorationsList: []
   decorationSpace: 2
-  decorationCount: 12
+  decorationCount: 24
 --- !u!1 &1666734972
 GameObject:
   m_ObjectHideFlags: 0

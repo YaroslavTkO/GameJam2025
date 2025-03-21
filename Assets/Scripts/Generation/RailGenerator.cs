@@ -10,7 +10,7 @@ public class RailGenerator : MonoBehaviour
     public float railLength;
     public List<GameObject> railList;
 
-    private float spawnPosition = 0f;
+    private float spawnPosition = -5f;
 
     // Start is called before the first frame update
     void Start()

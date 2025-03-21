@@ -18,8 +18,9 @@ public class GameManager : MonoBehaviour
     public bool IsGameActive
     {
         get { return isGameActive; }
-        set { isGameActive = value; if (value == false) UiManager.Instance.DeathScreen(score); }
+        set { isGameActive = value; if (value == false) { SaveRecord(); UiManager.Instance.DeathScreen(score); } }
     }
+
 
     void Awake()
     {
@@ -32,6 +33,18 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    public void SaveRecord()
+    {
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        if(score > highScore)
+        {
+            Debug.Log("called");
+            PlayerPrefs.SetInt("HighScore", score);
+            Debug.Log(PlayerPrefs.GetInt("HighScore"));
+            UiManager.Instance.UpdateHighScore();
+        }
+
     }
 
     public void GameOver()

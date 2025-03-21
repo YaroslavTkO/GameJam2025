@@ -7,7 +7,7 @@ public class DecorationGenerator : MonoBehaviour
     public GameObject[] DecorationPrefabs;
     public Transform train;
     public List<GameObject> decorationsList;
-    private float spawnPosition = 0f;
+    private float spawnPosition = -3f;
     public float decorationSpace;
     public int decorationCount;
 
