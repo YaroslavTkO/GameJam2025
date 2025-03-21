@@ -11,6 +11,7 @@ public class UiManager : MonoBehaviour
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI moneyText2;
     public TextMeshProUGUI fuelText;
     public TextMeshProUGUI passengersText;
 
@@ -43,6 +44,7 @@ public class UiManager : MonoBehaviour
     public void UpdateMoneyText(string newMoneyString)
     {
         moneyText.text = newMoneyString;
+        moneyText2.text = newMoneyString;
     }
     public void UpdateScoreText(string newScoreString)
     {
