@@ -133,6 +133,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 6615692870355310775}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: ClickSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &308013741674895689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,6 +1684,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6615692870355310775}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: ClickSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4294266290285466302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,8 +2289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90.979996, y: -0.000035131023}
-  m_SizeDelta: {x: 250, y: 100}
+  m_AnchoredPosition: {x: 115, y: -0.000035131023}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7125436980692903348
 CanvasRenderer:
@@ -2400,8 +2424,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 91.10001, y: -6.5164}
-  m_SizeDelta: {x: 250, y: 100}
+  m_AnchoredPosition: {x: 115, y: -6.5164}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.43483633}
 --- !u!222 &4717699043051103252
 CanvasRenderer:
@@ -2724,6 +2748,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6615692870355310775}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: ClickSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5942276133881041068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2759,8 +2795,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90.98001, y: -0.000039257982}
-  m_SizeDelta: {x: 250, y: 100}
+  m_AnchoredPosition: {x: 115, y: -0.000039257982}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &200872324333683477
 CanvasRenderer:
@@ -3180,6 +3216,7 @@ GameObject:
   - component: {fileID: 6615692870355310775}
   - component: {fileID: 1318694411983413296}
   - component: {fileID: 2749831137385975292}
+  - component: {fileID: 7700341302269032932}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3308,6 +3345,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1500891098300105234}
   shop: {fileID: 7542407417881547149}
   shopButton: {fileID: 145539902802532276}
+  clickSound: {fileID: 7700341302269032932}
 --- !u!114 &1318694411983413296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3346,6 +3384,102 @@ MonoBehaviour:
   stationTutorial: {fileID: 7116651348236462012}
   fadeDuration: 2
   visibleDuration: 2
+--- !u!82 &7700341302269032932
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615692870355310776}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b6f1c652f6dbe9344802fd07487c6b88, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6615692870366237028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,6 +4926,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6615692870355310775}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickSoundEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UiManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4785573632169494020, guid: 6e3d379b60f06084c804836f477050df, type: 3}
       propertyPath: m_text
       value: 'Improve acceleration by 5%
@@ -4943,12 +5093,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 6615692870355310776}
+      objectReference: {fileID: 6615692870355310775}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickSoundEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UiManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5236524432744953833, guid: 6e3d379b60f06084c804836f477050df, type: 3}
       propertyPath: m_Name
       value: MaxFuel
@@ -5091,6 +5253,22 @@ PrefabInstance:
     - target: {fileID: 359219209052428214, guid: 6e3d379b60f06084c804836f477050df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6615692870355310775}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickSoundEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UiManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4785573632169494020, guid: 6e3d379b60f06084c804836f477050df, type: 3}
       propertyPath: m_text
@@ -5238,6 +5416,22 @@ PrefabInstance:
     - target: {fileID: 359219209052428214, guid: 6e3d379b60f06084c804836f477050df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6615692870355310775}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickSoundEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UiManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 784949975790456947, guid: 6e3d379b60f06084c804836f477050df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4785573632169494020, guid: 6e3d379b60f06084c804836f477050df, type: 3}
       propertyPath: m_text

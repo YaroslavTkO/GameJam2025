@@ -29,7 +29,7 @@ public class TrainStats : MonoBehaviour
             money += passengers * ticketCost;
             if (passengers != 0)
                 UiManager.Instance.UpdateMoneyText(money.ToString());
-            passengers += stationBonuses.passengers;
+            passengers = stationBonuses.passengers;
             if (passengers > maxPassengers)
             {
                 passengers = maxPassengers;
@@ -53,6 +53,7 @@ public class TrainStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (GameManager.Instance.IsGameActive && !isOnStation)
         {
             fuel -= Time.deltaTime * fuelConsumption;

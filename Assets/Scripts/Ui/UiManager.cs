@@ -25,6 +25,8 @@ public class UiManager : MonoBehaviour
     public GameObject shopButton;
 
 
+    public AudioSource clickSound;
+
     void Awake()
     {
 
@@ -87,5 +89,10 @@ public class UiManager : MonoBehaviour
     {
         highScoreText.text = $"High score: {PlayerPrefs.GetInt("HighScore", 0)}";
     
+    }
+
+    public void ClickSoundEffect()
+    {
+        clickSound.Play();
     }
 }

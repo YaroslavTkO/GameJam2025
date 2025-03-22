@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Station : MonoBehaviour
 {
-
+    public AudioSource source;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +15,7 @@ public class Station : MonoBehaviour
             if (stats != null)
             {
                 stats.isOnStation = true;
+                source.Play();
                 stats.stationBonuses = GetComponent<StationStats>();
 
             }

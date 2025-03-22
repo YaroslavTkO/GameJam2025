@@ -7,7 +7,6 @@ public class ObstacleGeneration : MonoBehaviour
 {
     public GameObject[] ObstaclePrefabs;
     public Transform train;
-    public float obstacleSpawnChance = 0.25f;
     public GameObject currentObstacle;
 
     public bool tutorialShowed = false;
@@ -16,7 +15,7 @@ public class ObstacleGeneration : MonoBehaviour
     void Start()
     {
         tutorialShowed = PlayerPrefs.GetInt("obstacleTutorial", 0) == 0 ? false : true;
-        InvokeRepeating(nameof(SpawnObstacle), 1f, 2f);
+        InvokeRepeating(nameof(SpawnObstacle), 0f, 2f);
     }
     void SpawnObstacle()
     {
@@ -25,7 +24,7 @@ public class ObstacleGeneration : MonoBehaviour
         {
 
             Debug.Log("Spawning Obstacle...");
-            Vector3 obstaclePosition = new Vector3(0, train.position.y + 25, 0);
+            Vector3 obstaclePosition = new Vector3(0, train.position.y + 25 + Random.Range(-3f, 3f), 0);
             GameObject obstacle = Instantiate(ObstaclePrefabs[Random.Range(0, ObstaclePrefabs.Length)], obstaclePosition, Quaternion.identity);
             currentObstacle = obstacle;
         }

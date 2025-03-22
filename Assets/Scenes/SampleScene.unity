@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &295019393 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6615692870355310775, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+  m_PrefabInstance: {fileID: 6615692870117505197}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62992c5dc78efa49a9737c9039ead94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &393246108 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3171765573202061052, guid: cda348ad9d99757408215428a141754a, type: 3}
@@ -137,6 +148,11 @@ MonoBehaviour:
 --- !u!4 &393246110 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3171765573202061054, guid: cda348ad9d99757408215428a141754a, type: 3}
+  m_PrefabInstance: {fileID: 3171765573427516256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &700811761 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5750754087200773285, guid: cda348ad9d99757408215428a141754a, type: 3}
   m_PrefabInstance: {fileID: 3171765573427516256}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &924051349 stripped
@@ -211,6 +227,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 295019393}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: ClickSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1484163921 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7163606670181215370, guid: 0857a2e4dc490374f9070156e7c703fb, type: 3}
@@ -231,7 +259,6 @@ MonoBehaviour:
   StationPrefabs:
   - {fileID: 1859842070201722570, guid: 47fbb86d1e9922f4ba1657066d623b98, type: 3}
   train: {fileID: 393246110}
-  stationSpawnRate: 0.0005
   currentStation: {fileID: 0}
   distanceToDelete: 30
 --- !u!114 &1484163929
@@ -398,8 +425,24 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3171765573042334495, guid: cda348ad9d99757408215428a141754a, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3171765573042334495, guid: cda348ad9d99757408215428a141754a, type: 3}
       propertyPath: orthographic size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3171765573042334495, guid: cda348ad9d99757408215428a141754a, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.3647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 3171765573042334495, guid: cda348ad9d99757408215428a141754a, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.5764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3171765573042334495, guid: cda348ad9d99757408215428a141754a, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.7647059
       objectReference: {fileID: 0}
     - target: {fileID: 3171765573202061051, guid: cda348ad9d99757408215428a141754a, type: 3}
       propertyPath: m_Name
@@ -409,6 +452,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3171765573202061052, guid: cda348ad9d99757408215428a141754a, type: 3}
+      propertyPath: trainAudioSource
+      value: 
+      objectReference: {fileID: 700811761}
     - target: {fileID: 3171765573202061054, guid: cda348ad9d99757408215428a141754a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -480,7 +527,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271280333282371341, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -430
+      value: -600
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938347101496701750, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2137446944842831163, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -534,9 +585,34 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4294039844805203445, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: TipsList.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294039844805203445, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: TipsList.Array.data[5]
+      value: "\u041D\u0435\u043C\u0430\u0454 \u0446\u0456\u043B\u0456, \u043B\u0438\u0448\u0435
+        \u0448\u043B\u044F\u0445"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294039844805203445, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: TipsList.Array.data[6]
+      value: Use coins to upgrade your train
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294039844805203445, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: TipsList.Array.data[7]
+      value: Use coins to upgrade your train
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294039844805203445, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: TipsList.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4478010640609953485, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
       propertyPath: m_Alpha
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637920741999014877, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6094314389289829356, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
       propertyPath: m_LocalScale.x
@@ -584,7 +660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6332077652734505007, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -430
+      value: -600
       objectReference: {fileID: 0}
     - target: {fileID: 6615692870355310772, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
       propertyPath: m_Pivot.x
@@ -740,7 +816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7542407417881547149, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}

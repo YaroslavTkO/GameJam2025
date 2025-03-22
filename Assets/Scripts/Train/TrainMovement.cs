@@ -7,6 +7,8 @@ public class TrainMovement : MonoBehaviour
     public float currentSpeed;
     
     public TrainStats stats;
+    public AudioSource trainAudioSource;
+    public AudioSource breaksAudio;
 
 
     private GameManager manager;
@@ -16,6 +18,9 @@ public class TrainMovement : MonoBehaviour
     void Start()
     {
         manager = GameManager.Instance;
+        trainAudioSource.volume = 0.4f;
+        breaksAudio.volume = 0.4f;
+        breaksAudio.loop = true;
     }
 
     public void ChangeAccelerationStatus(bool newStatus)
@@ -58,7 +63,24 @@ public class TrainMovement : MonoBehaviour
     {
         if (manager.IsGameActive)
         {
+            
             UserInput();
+            if (decelerating && currentSpeed > 0 && !breaksAudio.isPlaying)
+            {
+                breaksAudio.Play();
+            }
+            else if ((!decelerating || currentSpeed <= 0) && breaksAudio.isPlaying)
+            {
+                breaksAudio.Stop();
+            }
+            if (currentSpeed > 0 && !trainAudioSource.isPlaying)
+            {
+                trainAudioSource.Play();
+            }
+            else if (trainAudioSource.isPlaying && currentSpeed <= 0) {
+                trainAudioSource.Stop();
+            
+            }
             if(stats.isOnStation && currentSpeed == 0) {
                 stats.ClaimStationBonus();
                 UiManager.Instance.ShopButtonChangeVisibility(true);
