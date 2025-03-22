@@ -302,6 +302,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!225 &1736092179 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 4478010640609953485, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+  m_PrefabInstance: {fileID: 6615692870117505197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1805231516
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +490,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2749831137385975292, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: controlsTutorial
+      value: 
+      objectReference: {fileID: 1736092179}
     - target: {fileID: 3119160645124172583, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1182.04
@@ -508,6 +517,10 @@ PrefabInstance:
     - target: {fileID: 3119160645124172583, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -2768
+      objectReference: {fileID: 0}
+    - target: {fileID: 4478010640609953485, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6094314389289829356, guid: 0380a6efd96439746a6e9e539861ba8a, type: 3}
       propertyPath: m_LocalScale.x

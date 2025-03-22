@@ -11,8 +11,11 @@ public class StationGenerator : MonoBehaviour
     public GameObject currentStation;
     public float distanceToDelete;
 
+    private bool tutorialShowed = false;
+
     private void Start()
     {
+        tutorialShowed = PlayerPrefs.GetInt("stationTutorial", 0) == 0 ? false : true;
         InvokeRepeating(nameof(SpawnStation), 1f, 3f);
     }
 
@@ -40,6 +43,25 @@ public class StationGenerator : MonoBehaviour
     }
     void Update()
     {
+        Tutorial();
+
         DestroyStation();
+    }
+
+    void Tutorial()
+    {
+        if (!tutorialShowed && currentStation != null)
+        {
+            if (currentStation.transform.position.y - train.transform.position.y < 2f)
+            {
+                train.GetComponent<TrainMovement>().currentSpeed = 0;
+                TutorialManager.Instance.Show(2);
+                tutorialShowed = true;
+
+                //     PlayerPrefs.SetInt("stationTutorial", 1);
+            }
+
+        }
+
     }
 }

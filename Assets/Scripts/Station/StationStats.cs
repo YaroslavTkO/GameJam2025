@@ -11,7 +11,7 @@ public class StationStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fuel = Random.Range(50f, 100f);
+        fuel = Random.Range(60f, 100f);
         passengers = Random.Range(5, 10);
         
     }
