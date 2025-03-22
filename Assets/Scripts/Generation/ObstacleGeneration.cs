@@ -41,7 +41,7 @@ public class ObstacleGeneration : MonoBehaviour
                 TutorialManager.Instance.Show(1);
                 tutorialShowed = true;
 
-                //     PlayerPrefs.SetInt("obstacleTutorial", 1);
+                PlayerPrefs.SetInt("obstacleTutorial", 1);
             }
 
         }

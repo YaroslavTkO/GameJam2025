@@ -58,7 +58,7 @@ public class StationGenerator : MonoBehaviour
                 TutorialManager.Instance.Show(2);
                 tutorialShowed = true;
 
-                //     PlayerPrefs.SetInt("stationTutorial", 1);
+                PlayerPrefs.SetInt("stationTutorial", 1);
             }
 
         }
