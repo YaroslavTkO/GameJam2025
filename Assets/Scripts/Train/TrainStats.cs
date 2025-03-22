@@ -53,13 +53,12 @@ public class TrainStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.IsGameActive)
+        if (GameManager.Instance.IsGameActive && !isOnStation)
         {
             fuel -= Time.deltaTime * fuelConsumption;
             UiManager.Instance.UpdateFuelText($" {((int)fuel)}\\{Mathf.Round(maxFuel)}");
             if (fuel <= 0)
             {
-                Debug.Log("HEre?");
                 GameManager.Instance.IsGameActive = false;
             }
 

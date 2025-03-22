@@ -78,6 +78,7 @@ public class LevelsController : MonoBehaviour
                 break;
         }
         UiManager.Instance.UpdateMoneyText(stats.money.ToString());
+        UiManager.Instance.UpdateFuelText($"{stats.fuel}\\{stats.maxFuel}");
     }
 }
 
